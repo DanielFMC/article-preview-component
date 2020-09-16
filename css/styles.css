@@ -48,7 +48,7 @@ body {
 .post--content p {
   font-weight: 500;
   color: hsl(214, 17%, 51%);
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .post--profile {
@@ -60,7 +60,6 @@ body {
 
 .post--profile__info {
   display: flex;
-  margin-top: 10px;
 }
 
 .post--profile__avatar img {
@@ -139,7 +138,6 @@ body {
 .is-active {
   display: flex;
   position: absolute;
-  position: absolute;
   bottom: 85px;
   left: 285px;
 }
@@ -153,4 +151,82 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  .article {
+    max-width: 85%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .post {
+    padding: 30px 34px;
+    line-height: 1.5;
+  }
+
+  .post--title h2 {
+    font-size: 16px;
+  }
+
+  .post--content p {
+    font-size: 13px;
+    margin: 16px 0;
+  }
+
+  .post--profile__avatar img {
+    width: 40px;
+  }
+
+  .post--profile__name h4,
+  .post--profile__name p {
+    font-size: 13px;
+  }
+
+  .post--profile__share {
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+
+  .post--profile__popover {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .post--profile__popover > svg,
+  .post--profile__popover > p {
+    margin-left: 10px;
+  }
+
+  .post--profile__popover::after {
+    content: "";
+    margin-left: 0px;
+    border-width: 0px;
+    border-style: none;
+    border-color: none;
+    position: initial;
+  }
+
+  .is-active {
+    display: flex;
+    position: initial;
+    height: 46px;
+  }
+
+  .is-not-visible {
+    display: none;
+  }
 }
