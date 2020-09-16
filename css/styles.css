@@ -21,7 +21,7 @@ body {
   flex-direction: row;
   background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+  box-shadow: 3px 8px 20px hsl(214, 17%, 51%);
 }
 
 .image {
@@ -29,6 +29,8 @@ body {
   height: 100%;
   background-image: url(/images/drawers.jpg);
   background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .post {
@@ -53,6 +55,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .post--profile__info {
@@ -101,9 +104,51 @@ body {
   transition: 450ms all;
 }
 
+.post--profile__popover {
+  display: none;
+  background-color: hsl(217, 19%, 35%);
+  width: 270px;
+  height: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  box-shadow: 1px 4px 20px hsl(214, 17%, 51%);
+}
+
+.post--profile__popover p {
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+
+.post--profile__popover svg {
+  cursor: pointer;
+}
+
+.post--profile__popover::after {
+  content: "";
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  position: relative;
+  top: 43px;
+  right: 100px;
+}
+
+.is-active {
+  display: flex;
+  position: absolute;
+  position: absolute;
+  bottom: 85px;
+  left: 285px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .attribution a {
