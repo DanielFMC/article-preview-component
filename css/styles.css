@@ -94,12 +94,12 @@ body {
   border-radius: 100px;
 }
 
-.post--profile__share a:hover {
+.post--profile__shareButton:hover {
   background-color: hsl(214, 17%, 51%);
   transition: 450ms all;
 }
 
-.post--profile__share a:hover .share-svg {
+.post--profile__shareButton:hover .share-svg {
   fill: #ffffff;
   transition: 450ms all;
 }
