@@ -34,10 +34,13 @@ body {
 }
 
 .post {
-  padding: 30px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.post--main {
+  padding: 30px 40px 0 50px;
 }
 
 .post--title h2 {
@@ -48,7 +51,7 @@ body {
 .post--content p {
   font-weight: 500;
   color: hsl(214, 17%, 51%);
-  margin: 10px 0;
+  margin: 12px 0 15px;
 }
 
 .post--profile {
@@ -56,10 +59,14 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  height: 76px;
+  /* padding: 0 50px 30px 50px; */
 }
 
 .post--profile__info {
   display: flex;
+  padding-left: 50px;
+  padding-bottom: 30px;
 }
 
 .post--profile__avatar img {
@@ -81,6 +88,11 @@ body {
 .post--profile__name p {
   color: hsl(214, 17%, 51%);
   font-weight: 500;
+}
+
+.post--profile__share {
+  padding-right: 50px;
+  padding-bottom: 30px;
 }
 
 .post--profile__share a {
@@ -138,8 +150,8 @@ body {
 .is-active {
   display: flex;
   position: absolute;
-  bottom: 85px;
-  left: 285px;
+  bottom: 118px;
+  left: 308px;
 }
 
 .attribution {
@@ -173,8 +185,12 @@ body {
   }
 
   .post {
-    padding: 30px 34px;
+    padding: 0;
     line-height: 1.5;
+  }
+
+  .post--main {
+    padding: 30px 34px 0 30px;
   }
 
   .post--title h2 {
@@ -184,6 +200,12 @@ body {
   .post--content p {
     font-size: 13px;
     margin: 16px 0;
+  }
+
+  .post--profile__info {
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
 
   .post--profile__avatar img {
@@ -196,19 +218,27 @@ body {
   }
 
   .post--profile__share {
-    position: absolute;
-    top: 6px;
-    right: 0;
+    padding: 0;
+    position: fixed;
+    /* right: 55px;
+    bottom: 85px; */
+    right: 18%;
+    bottom: 13%;
   }
 
   .post--profile__popover {
     justify-content: flex-start;
     width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
-  .post--profile__popover > svg,
+  .post--profile__popover > svg {
+    margin-left: 20px;
+  }
+
   .post--profile__popover > p {
-    margin-left: 10px;
+    margin-left: 34px;
   }
 
   .post--profile__popover::after {
@@ -223,7 +253,9 @@ body {
   .is-active {
     display: flex;
     position: initial;
-    height: 46px;
+    /* top: 0;
+    left: 0; */
+    height: 76px;
   }
 
   .is-not-visible {

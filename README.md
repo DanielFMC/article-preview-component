@@ -2,6 +2,8 @@
 
 ![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)
 
+View my [solution](https://danielfmc.github.io/article-preview-component/).
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
